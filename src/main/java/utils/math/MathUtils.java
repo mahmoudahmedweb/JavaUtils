@@ -66,11 +66,7 @@ public class MathUtils {
      */
     public static double calculateAverage(int[] numbers) {
         emptyOrNullArray(numbers);
-        int sum = 0;
-        for (int number : numbers) {
-            sum += number;
-        }
-        return (double) sum / numbers.length;
+        return (double) sum(numbers) / numbers.length;
     }
 
     /**
@@ -120,11 +116,8 @@ public class MathUtils {
         emptyOrNullArray(numbers);
 
         // Calculate the mean (average)
-        double sum = 0;
-        for (int number : numbers) {
-            sum += number;
-        }
-        double mean = sum / numbers.length;
+
+        double mean = sum(numbers) / numbers.length;
 
         // Calculate the sum of squared differences
         double sumSquaredDifferences = 0;

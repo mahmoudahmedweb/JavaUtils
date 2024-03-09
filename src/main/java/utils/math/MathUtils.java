@@ -1,7 +1,7 @@
 package utils.math;
 
 @lombok.Data
-public class Math {
+public class MathUtils {
     // Finding maximum of integers
 
     public static int findMax(int[] numbers) {
@@ -90,7 +90,7 @@ public class Math {
         double variance = sumSquaredDifferences / numbers.length;
 
         // Calculate the standard deviation (square root of variance)
-        double standardDeviation = Math.calculateSquareRoot(variance);
+        double standardDeviation = MathUtils.calculateSquareRoot(variance);
 
         return standardDeviation;
     }
@@ -118,10 +118,10 @@ public class Math {
         numbers[3] = 4;
         numbers[4] = 5;
 
-        System.out.println(Math.findMax(numbers));
-        System.out.println(Math.findMin(numbers));
-        System.out.println(Math.sum(numbers));
-        System.out.println(Math.calculateStandardDeviation(numbers));
+        System.out.println(MathUtils.findMax(numbers));
+        System.out.println(MathUtils.findMin(numbers));
+        System.out.println(MathUtils.sum(numbers));
+        System.out.println(MathUtils.calculateStandardDeviation(numbers));
 
     }
 

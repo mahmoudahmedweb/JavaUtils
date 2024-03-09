@@ -116,7 +116,7 @@ public class MathUtils {
         emptyOrNullArray(numbers);
 
         // Calculate the mean (average)
-        double mean = calculateAverage(numbers);
+        double mean = sum(numbers) / numbers.length;
 
         // Calculate the sum of squared differences
         double sumSquaredDifferences = 0;
@@ -174,6 +174,7 @@ public class MathUtils {
         System.out.println(MathUtils.calculateStandardDeviation(numbers));
 
     }
+
 
 
 }

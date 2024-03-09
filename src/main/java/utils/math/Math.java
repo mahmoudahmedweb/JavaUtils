@@ -30,10 +30,7 @@ public class Math {
     }
 
     public static int sum(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
-            throw new IllegalArgumentException("Array is empty or null");
-        }
-
+        emptyOrNullArray(numbers);
         int sum = 0;
         for (int number : numbers) {
             sum += number;
@@ -41,9 +38,7 @@ public class Math {
         return sum;
     }
     public static double calculateAverage(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
-            throw new IllegalArgumentException("Array is empty or null");
-        }
+        emptyOrNullArray(numbers);
         int sum = 0;
         for (int number : numbers) {
             sum += number;
@@ -52,9 +47,7 @@ public class Math {
     }
 
     public static int product(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
-            throw new IllegalArgumentException("Array is empty or null");
-        }
+        emptyOrNullArray(numbers);
 
         int product = 1;
         for (int number : numbers) {
@@ -77,9 +70,7 @@ public class Math {
         return guess;
     }
     public static double calculateStandardDeviation(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
-            throw new IllegalArgumentException("Array is empty or null");
-        }
+        emptyOrNullArray(numbers);
 
         // Calculate the mean (average)
         double sum = 0;
@@ -110,6 +101,13 @@ public class Math {
 
     public static double abs(double num) {
         return num >= 0 ? num : -num;
+    }
+
+    // Handling Exception if an Array is Empty or null
+    public static void emptyOrNullArray(int[] numbers) {
+        if (numbers == null || numbers.length == 0) {
+            throw new IllegalArgumentException("Array is empty or null");
+        }
     }
     public static void main(String[] args) {
         int[] numbers = new int[5];

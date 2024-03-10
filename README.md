@@ -19,11 +19,11 @@ and other essential methods.
 - **Linear Search** for finding elements in an array with linear complexity.
 - **Binary Search** algorithm for finding elements in a sorted array with logarithmic time complexity.
 ### Sorting Algorithms:
-- **BubbleSort**
-- **InsertionSort**
-- **MergeSort**
-- **QuickSort**
-- **SelectionSort**
+- **BubbleSort:** Simple comparison-based sorting algorithm. 
+- **InsertionSort:** Builds the final sorted array one item at a time. 
+- **MergeSort:** Divides, conquers, and merges sub-arrays. 
+- **QuickSort:** Efficient divide and conquer algorithm. 
+- **SelectionSort:** Sorts by repeatedly selecting the minimum element.
 
 ## Purpose
 JavaUtils was a personal practice project aimed to enhance my Java programming

@@ -1,7 +1,5 @@
 package utils.search;
 
-import utils.search.LinearSearch;
-
 public class LinearSearchTest {
     public static void main(String[] args) {
         // Test with an array of integers

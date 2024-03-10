@@ -1,6 +1,5 @@
 package utils.datastructure;
 
-import utils.datastructure.StackLinkedList;
 import java.util.EmptyStackException;
 
 public class StackLinkedListTest {

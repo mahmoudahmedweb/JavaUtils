@@ -1,6 +1,5 @@
 package utils.sorting;
 
-import utils.sorting.SelectionSort;
 import java.util.Arrays;
 
 public class SelectionSortTest {

@@ -1,7 +1,5 @@
 package utils.sorting;
 
-import utils.sorting.MergeSort;
-
 import java.util.Arrays;
 
 public class MergeSortTest {

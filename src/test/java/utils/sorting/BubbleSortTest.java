@@ -1,7 +1,5 @@
 package utils.sorting;
 
-import utils.sorting.BubbleSort;
-
 import java.util.Arrays;
 
 public class BubbleSortTest {

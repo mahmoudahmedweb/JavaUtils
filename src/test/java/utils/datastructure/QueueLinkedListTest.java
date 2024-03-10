@@ -1,7 +1,5 @@
 package utils.datastructure;
 
-import utils.datastructure.QueueLinkedList;
-
 public class QueueLinkedListTest {
     public static void main(String[] args) {
         QueueLinkedList<Integer> queue = new QueueLinkedList<>();

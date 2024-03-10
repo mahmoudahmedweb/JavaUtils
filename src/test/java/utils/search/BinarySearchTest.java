@@ -1,7 +1,5 @@
 package utils.search;
 
-import utils.search.BinarySearch;
-
 public class BinarySearchTest {
     public static void main(String[] args) {
         // Test case with integers

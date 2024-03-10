@@ -1,7 +1,5 @@
 package utils.datastructure;
 
-import utils.datastructure.ResizingArrayStack;
-
 import java.util.EmptyStackException;
 
 public class ResizingArrayStackTest {

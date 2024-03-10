@@ -3,7 +3,6 @@ package utils.math;
 /**
  * Utility class for some array's mathematical operations.
  */
-@lombok.Data
 public final class MathUtils {
 
     /**

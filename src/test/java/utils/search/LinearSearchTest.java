@@ -1,3 +1,5 @@
+package utils.search;
+
 import utils.search.LinearSearch;
 
 public class LinearSearchTest {

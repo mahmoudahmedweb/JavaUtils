@@ -1,3 +1,5 @@
+package utils.sorting;
+
 import utils.sorting.InsertionSort;
 
 import java.util.Arrays;

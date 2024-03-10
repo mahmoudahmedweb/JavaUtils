@@ -1,3 +1,5 @@
+package utils.datastructure;
+
 import utils.datastructure.ArrayList;
 
 public class ArrayListTest {

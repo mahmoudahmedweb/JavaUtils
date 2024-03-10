@@ -1,3 +1,5 @@
+package utils.sorting;
+
 import utils.sorting.QuickSort;
 import java.util.Arrays;
 

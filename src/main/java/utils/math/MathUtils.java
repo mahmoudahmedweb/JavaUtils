@@ -7,7 +7,7 @@ package utils.math;
 public class MathUtils {
     /**
      * Finds the maximum value in an array of integers
-     * @param numbers
+     * @param numbers the array of integers
      * @return the maximum value
      * @throws IllegalArgumentException if the array is empty or null
      */
@@ -26,7 +26,7 @@ public class MathUtils {
     }
     /**
      * Finds the minimum value in an array of integers
-     * @param numbers
+     * @param numbers the array of integers
      * @return the minimum value
      * @throws IllegalArgumentException if the array is empty or null
      */
@@ -45,7 +45,7 @@ public class MathUtils {
     }
     /**
      * Finds the sum of the values in an array of integers
-     * @param numbers
+     * @param numbers the array of integers
      * @return the sum value
      * @throws IllegalArgumentException if the array is empty or null
      */
@@ -60,7 +60,7 @@ public class MathUtils {
     }
     /**
      * Finds the Average of the value in an array of integers
-     * @param numbers
+     * @param numbers the array of integers
      * @return the Average value
      * @throws IllegalArgumentException if the array is empty or null
      */
@@ -71,7 +71,7 @@ public class MathUtils {
 
     /**
      * Finds the product of the values in an array of integers
-     * @param numbers
+     * @param numbers the array of integers
      * @return the Product value
      * @throws IllegalArgumentException if the array is empty or null
      */

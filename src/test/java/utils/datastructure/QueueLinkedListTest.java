@@ -1,3 +1,5 @@
+package utils.datastructure;
+
 import utils.datastructure.QueueLinkedList;
 
 public class QueueLinkedListTest {

@@ -9,6 +9,7 @@ public class EmptyQueueException extends RuntimeException {
      * @param message the detail message (which is saved for later retrieval by the getMessage() method)
      */
     public EmptyQueueException(String message) {
+
         super(message);
     }
 }

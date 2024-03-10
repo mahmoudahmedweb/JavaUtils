@@ -7,8 +7,17 @@ import java.util.Arrays;
  * @param <T> the type of elements in the ArrayList
  */
 public class ArrayList<T> {
+    /**
+     * The default initial capacity of the ArrayList.
+     */
     private static final int DEFAULT_CAPACITY = 10;
+    /**
+     * The array buffer that stores the elements of the ArrayList.
+     */
     private Object[] array;
+    /**
+     * The number of elements currently stored in the ArrayList.
+     */
     private int size;
 
     /**
@@ -23,9 +32,10 @@ public class ArrayList<T> {
      * Constructs an empty ArrayList with the specified initial capacity.
      * @param initialCapacity the initial capacity of the ArrayList
      */
-    public ArrayList(int initialCapacity) {
+    public ArrayList(final int initialCapacity) {
         if (initialCapacity <= 0) {
-            throw new IllegalArgumentException("Initial capacity must be positive");
+            throw new IllegalArgumentException("Initial capacity "
+                    + "must be positive");
         }
         array = new Object[initialCapacity];
         size = 0;
@@ -51,7 +61,7 @@ public class ArrayList<T> {
      * Adds an element to the end of the ArrayList.
      * @param item the element to add
      */
-    public void add(T item) {
+    public void add(final T item) {
         if (size == array.length) {
             resize(array.length * 2);
         }
@@ -64,7 +74,7 @@ public class ArrayList<T> {
      * @return the element at the specified index
      * @throws IndexOutOfBoundsException if the index is out of range
      */
-    public T get(int index) {
+    public T get(final int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index out of range: " + index);
         }
@@ -72,7 +82,7 @@ public class ArrayList<T> {
     }
 
     // Resizes the underlying array to the specified capacity
-    private void resize(int capacity) {
+    private void resize(final int capacity) {
         array = Arrays.copyOf(array, capacity);
     }
 }

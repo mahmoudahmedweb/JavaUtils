@@ -2,12 +2,13 @@ package utils.search;
 
 public class BinarySearch<T extends Comparable<T>> {
     /**
-     * Searches for a target value within a sorted array using the binary search algorithm.
+     * Searches for a target value within a sorted array using the
+     * binary search algorithm.
      * @param array The sorted array to search in.
      * @param target The value to search for.
      * @return The index of the target value if found, or -1 if not found.
      */
-    public int search(T[] array, T target) {
+    public int search(final T[] array, final T target) {
         int left = 0;
         int right = array.length - 1;
 

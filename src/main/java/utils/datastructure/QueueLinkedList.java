@@ -7,24 +7,43 @@ package utils.datastructure;
 public class QueueLinkedList<T> {
     /**
      * Represents a node in the linked list.
+     * @param <T> the type of data stored in the node
      */
     private static class Node<T> {
-        T data;
-        Node<T> next;
+        /**
+         * The data stored in the node.
+         */
+        private T data;
+        /**
+         * Reference to the next node in the linked list.
+         */
+        private Node<T> next;
 
         /**
          * Constructs a node with the specified data.
          * @param data the data to store in the node
          */
-        Node(T data) {
+        Node(final T data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    private Node<T> front; // Points to the front of the queue
-    private Node<T> rear;  // Points to the rear of the queue
-    private int size;      // Number of elements in the queue
+    /**
+     * Points to the front of the queue.
+     */
+    private Node<T> front;
+
+    /**
+     * Points to the rear of the queue.
+     */
+    private Node<T> rear;
+
+    /**
+     * Number of elements in the queue.
+     */
+    private int size;
+
 
     /**
      * Constructs an empty queue.
@@ -55,7 +74,7 @@ public class QueueLinkedList<T> {
      * Adds an element to the rear of the queue.
      * @param item the element to enqueue
      */
-    public void enqueue(T item) {
+    public void enqueue(final T item) {
         Node<T> newNode = new Node<>(item);
         if (isEmpty()) {
             front = newNode;

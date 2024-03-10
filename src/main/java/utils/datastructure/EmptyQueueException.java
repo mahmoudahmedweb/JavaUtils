@@ -6,9 +6,9 @@ package utils.datastructure;
 public class EmptyQueueException extends RuntimeException {
     /**
      * Constructs a new EmptyQueueException with the specified detail message.
-     * @param message the detail message (which is saved for later retrieval by the getMessage() method)
+     * @param message the detail message
      */
-    public EmptyQueueException(String message) {
+    public EmptyQueueException(final String message) {
 
         super(message);
     }

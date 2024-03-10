@@ -1,10 +1,13 @@
 package utils.sorting;
 
 /**
- * Implementation of the Merge Sort algorithm for sorting arrays of Comparable elements.
- * Merge sort is a divide-and-conquer algorithm that divides the input array into two halves, sorts each half recursively,
+ * Implementation of the Merge Sort algorithm for sorting
+ * arrays of Comparable elements.
+ * Merge sort is a divide-and-conquer algorithm that divides
+ * the input array into two halves, sorts each half recursively,
  * and then merges the sorted halves.
- * @param <T> the type of elements in the array, must implement the Comparable interface
+ * @param <T> the type of elements in the array, must implement
+ * the Comparable interface
  */
 public class MergeSort<T extends Comparable<T>> {
 
@@ -12,7 +15,7 @@ public class MergeSort<T extends Comparable<T>> {
      * Sorts the input array using the Merge Sort algorithm.
      * @param arr the array to be sorted
      */
-    public void sort(T[] arr) {
+    public void sort(final T[] arr) {
         if (arr == null || arr.length <= 1) {
             return;
         }
@@ -25,7 +28,7 @@ public class MergeSort<T extends Comparable<T>> {
      * @param low the index of the first element of the subarray
      * @param high the index of the last element of the subarray
      */
-    private void mergeSort(T[] arr, int low, int high) {
+    private void mergeSort(final T[] arr, final int low, final int high) {
         if (low < high) {
             int mid = low + (high - low) / 2;
 
@@ -45,7 +48,8 @@ public class MergeSort<T extends Comparable<T>> {
      * @param mid the index of the last element of the first subarray
      * @param high the index of the last element of the second subarray
      */
-    private void merge(T[] arr, int low, int mid, int high) {
+    private void merge(final T[] arr, final int low,
+                       final int mid, final int high) {
         int n1 = mid - low + 1;
         int n2 = high - mid;
 
@@ -62,7 +66,8 @@ public class MergeSort<T extends Comparable<T>> {
         }
 
         // Merge the temporary arrays
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         int k = low;
         while (i < n1 && j < n2) {
             if (leftArray[i].compareTo(rightArray[j]) <= 0) {

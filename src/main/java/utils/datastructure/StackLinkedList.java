@@ -8,7 +8,13 @@ import java.util.EmptyStackException;
  * @param <T> the type of elements stored in the stack
  */
 public class StackLinkedList<T> {
-    private Node<T> top; // Top of the stack
+    /**
+     * Represents the top of the stack.
+     */
+    private Node<T> top;
+    /**
+     * Represents the size of the stack.
+     */
     private int size;    // Size of the stack
 
     /**
@@ -24,7 +30,7 @@ public class StackLinkedList<T> {
      *
      * @param data the element to push onto the stack
      */
-    public void push(T data) {
+    public void push(final T data) {
         Node<T> newNode = new Node<>(data);
         newNode.next = top;
         top = newNode;
@@ -80,17 +86,23 @@ public class StackLinkedList<T> {
 
     /**
      * Represents a node in the linked list.
+     * @param <T> the type of data stored in the node
      */
     private static class Node<T> {
-        private T data;       // Data stored in the node
-        private Node<T> next; // Reference to the next node
+        /**
+         * Represents data stored in the node.
+         */
+        private T data;
+        /**
+         * Represents a reference to the next node.
+         */
+        private Node<T> next;
 
         /**
          * Constructs a node with the given data.
-         *
-         * @param data the data to store in the node
+         * @param data the data to store in the node.
          */
-        public Node(T data) {
+         Node(final T data) {
             this.data = data;
             this.next = null;
         }

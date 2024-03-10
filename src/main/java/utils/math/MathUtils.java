@@ -4,15 +4,28 @@ package utils.math;
  * Utility class for some array's mathematical operations.
  */
 @lombok.Data
-public class MathUtils {
+public final class MathUtils {
+
     /**
-     * Finds the maximum value in an array of integers
+     * Private constructor to prevent instantiation of
+     * the {@code MathUtils} utility class.
+     * This class provides static methods for mathematical operations
+     * on arrays. It is not meant to be instantiated.
+     * @throws AssertionError if an attempt is made to instantiate the
+     * class
+     */
+    private MathUtils() {
+        // Private constructor to prevent instantiation
+        throw new AssertionError("Utility class MathUtils "
+                + "cannot be instantiated");
+    }
+    /**
+     * Finds the maximum value in an array of integers.
      * @param numbers the array of integers
      * @return the maximum value
      * @throws IllegalArgumentException if the array is empty or null
      */
-
-    public static int findMax(int[] numbers) {
+    public static int findMax(final int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Array is empty or null");
         }
@@ -25,12 +38,12 @@ public class MathUtils {
         return max;
     }
     /**
-     * Finds the minimum value in an array of integers
+     * Finds the minimum value in an array of integers.
      * @param numbers the array of integers
      * @return the minimum value
      * @throws IllegalArgumentException if the array is empty or null
      */
-    public static int findMin(int[] numbers) {
+    public static int findMin(final int[] numbers) {
 
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Array is empty or null");
@@ -44,13 +57,13 @@ public class MathUtils {
         return min;
     }
     /**
-     * Finds the sum of the values in an array of integers
+     * Finds the sum of the values in an array of integers.
      * @param numbers the array of integers
      * @return the sum value
      * @throws IllegalArgumentException if the array is empty or null
      */
 
-    public static int sum(int[] numbers) {
+    public static int sum(final int[] numbers) {
         emptyOrNullArray(numbers);
         int sum = 0;
         for (int number : numbers) {
@@ -59,23 +72,23 @@ public class MathUtils {
         return sum;
     }
     /**
-     * Finds the Average of the value in an array of integers
+     * Finds the Average of the value in an array of integers.
      * @param numbers the array of integers
      * @return the Average value
      * @throws IllegalArgumentException if the array is empty or null
      */
-    public static double calculateAverage(int[] numbers) {
+    public static double calculateAverage(final int[] numbers) {
         emptyOrNullArray(numbers);
         return (double) sum(numbers) / numbers.length;
     }
 
     /**
-     * Finds the product of the values in an array of integers
+     * Finds the product of the values in an array of integers.
      * @param numbers the array of integers
      * @return the Product value
      * @throws IllegalArgumentException if the array is empty or null
      */
-    public static int product(int[] numbers) {
+    public static int product(final int[] numbers) {
         emptyOrNullArray(numbers);
 
         int product = 1;
@@ -85,15 +98,17 @@ public class MathUtils {
         return product;
     }
     /**
-     * Calculates the square root of a non-negative number using Newton's method.
+     * Calculates the square root of a non-negative
+     * number using Newton's method.
      *
      * @param num the number to calculate the square root of
      * @return the square root of the input number
      * @throws IllegalArgumentException if the input number is negative
      */
-    public static double calculateSquareRoot(double num) {
+    public static double calculateSquareRoot(final double num) {
         if (num < 0) {
-            throw new IllegalArgumentException("Cannot calculate square root of a negative number");
+            throw new IllegalArgumentException("Cannot calculate square "
+                    + "root of a negative number");
         }
 
         double guess = num / 2; // Initial guess
@@ -112,7 +127,7 @@ public class MathUtils {
      * @return the standard deviation
      * @throws IllegalArgumentException if the array is empty or null
      */
-    public static double calculateStandardDeviation(int[] numbers) {
+    public static double calculateStandardDeviation(final int[] numbers) {
         emptyOrNullArray(numbers);
 
         // Calculate the mean (average)
@@ -139,7 +154,7 @@ public class MathUtils {
      * @param num the integer value
      * @return the absolute value of the input integer
      */
-    public static int abs(int num) {
+    public static int abs(final int num) {
         return num >= 0 ? num : -num;
     }
 
@@ -149,32 +164,18 @@ public class MathUtils {
      * @param num the double value
      * @return the absolute value of the input double
      */
-    public static double abs(double num) {
+    public static double abs(final double num) {
         return num >= 0 ? num : -num;
     }
 
-    // Handling Exception if an Array is Empty or null
-    public static void emptyOrNullArray(int[] numbers) {
+    /**
+     * Checks if the given array is null or empty.
+     * @param numbers numbers the array of integers to check
+     * @throws IllegalArgumentException if the array is empty or null
+     */
+    public static void emptyOrNullArray(final int[] numbers) {
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Array is empty or null");
         }
     }
-    public static void main(String[] args) {
-        int[] numbers = new int[5];
-
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
-        numbers[3] = 4;
-        numbers[4] = 5;
-
-        System.out.println(MathUtils.findMax(numbers));
-        System.out.println(MathUtils.findMin(numbers));
-        System.out.println(MathUtils.sum(numbers));
-        System.out.println(MathUtils.calculateStandardDeviation(numbers));
-
-    }
-
-
-
 }

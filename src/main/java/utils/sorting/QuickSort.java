@@ -1,10 +1,14 @@
 package utils.sorting;
 
 /**
- * Implementation of the Quick Sort algorithm for sorting arrays of Comparable elements.
- * Quick sort is a divide-and-conquer algorithm that partitions the array into two subarrays, then recursively sorts each subarray.
- * It's an efficient sorting algorithm with an average time complexity of O(n log n).
- * @param <T> the type of elements in the array, must implement the Comparable interface
+ * Implementation of the Quick Sort algorithm for sorting arrays of
+ * Comparable elements.
+ * Quick sort is a divide-and-conquer algorithm that partitions the
+ * array into two subarrays, then recursively sorts each subarray.
+ * It's an efficient sorting algorithm with an average time complexity
+ * of O(n log n).
+ * @param <T> the type of elements in the array, must implement the
+ * Comparable interface
  */
 public class QuickSort<T extends Comparable<T>> {
 
@@ -12,7 +16,7 @@ public class QuickSort<T extends Comparable<T>> {
      * Sorts the input array using the Quick Sort algorithm.
      * @param arr the array to be sorted
      */
-    public void quickSort(T[] arr) {
+    public void quickSort(final T[] arr) {
         quickSort(arr, 0, arr.length - 1);
     }
 
@@ -22,7 +26,7 @@ public class QuickSort<T extends Comparable<T>> {
      * @param low the index of the first element of the subarray
      * @param high the index of the last element of the subarray
      */
-    private void quickSort(T[] arr, int low, int high) {
+    private void quickSort(final T[] arr, final int low, final int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
 
@@ -32,13 +36,15 @@ public class QuickSort<T extends Comparable<T>> {
     }
 
     /**
-     * Partitions the input array into two subarrays, placing elements smaller than the pivot to the left and elements larger than the pivot to the right.
+     * Partitions the input array into two subarrays, placing elements
+     * smaller than the pivot to the left and elements larger than the
+     * pivot to the right.
      * @param arr the array to be partitioned
      * @param low the index of the first element of the subarray
      * @param high the index of the last element of the subarray
      * @return the index of the pivot element after partitioning
      */
-    private int partition(T[] arr, int low, int high) {
+    private int partition(final T[] arr, final int low, final int high) {
         T pivot = arr[high];
         int i = low - 1;
 

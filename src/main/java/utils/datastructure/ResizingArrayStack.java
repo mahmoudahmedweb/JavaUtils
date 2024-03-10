@@ -8,8 +8,19 @@ import java.util.EmptyStackException;
  * @param <T> the type of elements in the stack
  */
 public class ResizingArrayStack<T> {
+    /**
+     * The default initial capacity of the stack.
+     */
     private static final int DEFAULT_CAPACITY = 10;
+
+    /**
+     * The array buffer into which the elements of the stack are stored.
+     */
     private T[] array;
+
+    /**
+     * The number of elements in this stack.
+     */
     private int size;
 
     /**
@@ -24,9 +35,10 @@ public class ResizingArrayStack<T> {
      * Constructs an empty stack with the specified initial capacity.
      * @param initialCapacity the initial capacity of the stack
      */
-    public ResizingArrayStack(int initialCapacity) {
+    public ResizingArrayStack(final int initialCapacity) {
         if (initialCapacity <= 0) {
-            throw new IllegalArgumentException("Initial capacity must be positive");
+            throw new IllegalArgumentException("Initial capacity "
+                    + "must be positive");
         }
         array = (T[]) new Object[initialCapacity];
         size = 0;
@@ -52,7 +64,7 @@ public class ResizingArrayStack<T> {
      * Pushes an element onto the top of the stack.
      * @param item the element to push
      */
-    public void push(T item) {
+    public void push(final T item) {
         if (size == array.length) {
             resize(array.length * 2);
         }
@@ -89,7 +101,7 @@ public class ResizingArrayStack<T> {
     }
 
     // Resizes the underlying array to the specified capacity
-    private void resize(int capacity) {
+    private void resize(final int capacity) {
         array = Arrays.copyOf(array, capacity);
     }
 }
